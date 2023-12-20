@@ -4,7 +4,7 @@
 
 @section('content')
     <main>
-        <section class=" container ">
+        <section class=" container " id="movie-index">
             <h1>Movies</h1>
             <div class="row">
                 @foreach ($movies as $key => $movie)

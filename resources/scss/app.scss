@@ -36,3 +36,32 @@ $fa-font-path: "../webfonts" !default;
         object-position: top;
     }
 }
+.myshow-img{
+    width: 200px;
+    img{
+        width: 100%;
+    }
+}
+header{
+    background-color: rgba(0, 0, 0, 0.151);
+    a{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.897);
+        transition: all  0.4s;
+
+        &:hover{
+            color: white;
+            background-color: rgba(0, 0, 0, 0.394);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+}
+#movie-index{
+    a{
+        text-decoration: none;
+    }
+}
+.flag-img{
+    width: 30px;
+}
