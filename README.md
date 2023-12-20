@@ -1,78 +1,25 @@
-## Installazione laravel
+# Laravel - model - controller
 
-```bash
-# Da terminale
-cd /Users/simonenegrisoli/Desktop/Boolean/esercizi-boolean
+## Description
 
-composer create-project --prefer-dist laravel/laravel:^9.2 nome_progetto
+Oggi facciamo la nostra prima vera interazione con il database utilizzando l’ORM di Laravel.
 
-cd nome_progetto
+1. Create un nuovo progetto Laravel 9 (dal template)
 
-code . -r
+2. se lo avete già va benissimo il nostro shop_db se no tramite phpMyAdmin create un nuovo database laravel_model_controller
 
-# per far partire il server
-php artisan serve
+3. solo se non avete già il db Importate nel vostro database la tabella movies in allegato
 
-# per fermarlo
-ctrl + c
-```
+4. inserite le vostre credenziali per il database nel file.env
 
-## Configurazione Laravel
+5. Create un model Movie
 
-```bash
-# pacchetto boolean per automatizzare il processo
-composer require pacificdev/laravel_9_preset
+6. Create la rotta e un controller che gestirà la rotta / (home) e uno per i libri
 
-# installo il pacchetto
-php artisan preset:ui bootstrap
+7. All’interno della funzione index() del controller, recuperate tutti i film dal database e passateli alla view, che quindi li visualizzerà a schermo, tramite delle card.
 
-npm install
+8. Stilare il layout nei dettagli con Sass
 
-# fontawesome o qualunque altra libreria voglio aggiungere
-npm install --save @fortawesome/fontawesome-free
+### BONUS:
 
-
-# in vite config aggiungo agli alias
-'~@fortawesome': path.resolve(__dirname, 'node_modules/@fortawesome'),
-
-# vado dentro node_modules -> @fortawesome -> e copio la cartella webfonts dentro la cartella resources
-
-# adesso vado dentro resources -> scss -> app.scss e aggiungo in cima questo:
-$fa-font-path: "../webfonts" !default;
-
-
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import “~@fortawesome/fontawesome-free/scss/brands”;
-
-
-# creo la cartella partials all'interno di scss e creo il file _variables; poi importo il file dentro app.scss sopra tutto quanto (anche sopra i fontawesome)
-@use './partials/variables' as *;
-
-# dentro views creo una cartella layouts e metto il template di base
-```
-
-## Comandi Github
-
-```bash
-
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/SimoneNegrisoli/template_laravel_base.git
-git push -u origin main
-
-```
-
-## Iniziallizzazione progetto
-
-```bash
-
-# terminale
-composer install
-
-# copiare env.explample e rinominare la copia come .env, dentro do il comando
-php artisan key:generate
-```
+Creare rotta, link, aggiungere metodo show al controller, e pagina di dettaglio del movie
