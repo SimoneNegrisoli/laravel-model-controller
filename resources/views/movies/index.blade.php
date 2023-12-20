@@ -8,7 +8,7 @@
             <h1>Movies</h1>
             <div class="row">
                 @foreach ($movies as $key => $movie)
-                    <div class="col-12 col-md-3 mt-5 mb-5">
+                    <div class="col-12 col-md-4 col-lg-3 mt-5 mb-5">
                         <a href="{{ route('movies.show', $key) }}">
                             <div class="mycard">
                                 <div class="mycard-c">
