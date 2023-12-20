@@ -10,8 +10,29 @@ $fa-font-path: "../webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
+.mycard{
+    width: 100%;
+    height: 400px;
+    cursor: pointer;
+    transition: all 0.5s;
 
-h1{
-    color: $text-color;
+    &:hover{
+        transform: scale(1.1);
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.17);
+    }
+    h5{
+        font-size: 1rem;
+    }
 }
+.mycard-c {
+    width: 100%;
+    height: 100%;
 
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+}
