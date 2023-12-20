@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Movie')
+@section('title', 'Movies')
 
 @section('content')
-    questo è l'index
+    @foreach ($movies as $movie)
+        <li>{{ $movie->title }}</li>
+    @endforeach
 @endsection
