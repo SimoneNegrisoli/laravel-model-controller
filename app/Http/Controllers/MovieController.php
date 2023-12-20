@@ -15,7 +15,7 @@ class MovieController extends Controller
 
     public function show()
     {
-        $movie = Movie::all();
+        $movie = Movie::find('id');
         return view('movies.show', compact('movie'));
     }
 }
